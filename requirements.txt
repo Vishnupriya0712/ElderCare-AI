@@ -1,0 +1,7 @@
+
+streamlit
+pandas
+scikit-learn
+SpeechRecognition
+pyttsx3
+PyAudio

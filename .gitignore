@@ -1,0 +1,16 @@
+
+venv/
+.venv/
+__pycache__/
+*.pyc
+model_backup/
+.streamlit/secrets.toml
+
+# Personal runtime data
+reminders.json
+chat_history.json
+daily_schedule.json
+
+.DS_Store
+intent_model.pkl
+tfidf_vectorizer.pkl
