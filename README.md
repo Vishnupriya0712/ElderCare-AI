@@ -41,6 +41,34 @@ The application uses an ML-based intent classification chatbot to understand use
 ### 🔔 Alerts
 - Check medicine reminders and scheduled activities when the application runs or refreshes.
 
+
+## 🏗️ System Architecture
+
+The following diagram illustrates the main components of ElderCare AI and how they interact.
+
+```mermaid
+flowchart TD
+    A["👤 User"] --> B["Streamlit Interface<br/>app.py"]
+
+    B --> C["AI Chatbot<br/>chatbot.py"]
+    B --> D["Voice Assistant<br/>voice_assistant.py"]
+    B --> E["Medicine Reminders<br/>reminders.py"]
+    B --> F["Chat History<br/>chat_history.py"]
+    B --> G["Daily Schedule<br/>daily_schedule.py"]
+    B --> H["Alerts<br/>alerts.py"]
+
+    C --> I["TF-IDF Vectorizer"]
+    I --> J["Logistic Regression"]
+    J --> K["Intent Prediction & Response"]
+
+    E --> L[("reminders.json")]
+    F --> M[("chat_history.json")]
+    G --> N[("daily_schedule.json")]
+
+    H --> L
+    H --> N
+```
+
 ## 🧠 Machine Learning Approach
 
 The chatbot uses a text classification pipeline consisting of:
